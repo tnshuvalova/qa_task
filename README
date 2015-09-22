@@ -16,6 +16,7 @@ DEPENDENCIES AND LIBRARIES
 
 TEST EXECUTION
 Go to qa_task/test folder. There are 3 test modules, one for each task section
+Bug and feature notes read in test/notes
 ------------OK LEVEL-------------
 1. run from the command line 
 	>>> python ok_level.py

@@ -1,0 +1,5 @@
+1. Behaviour for DELETE request of non-existing id is not specified
+2. Message when deletion is successful
+3. Behaviour for GET request of non-existing id is not specified
+4. Rusult for GET request of all candidates can not be verified. (What do we have in DB and what we get?)
+5. BUG: GET request with id returns first available entry
