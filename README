@@ -1,0 +1,59 @@
+PRECONDITIONS
+1. python 3 installed on your local machine
+2. pip tool for your python version installed
+3. command line launched
+4. internet connection
+
+DEPENDENCIES AND LIBRARIES
+1. python libs - json, unittest. They are delivered with python. Make sure they installed. You can find it in /PATH/TO/PYTHON/Python33/Lib directory
+2. python libs - httplib2, requests, redis. Install them using pip tool
+	>>> pip install httplib2
+	>>> pip install requests
+	>>> pip install redis
+3. redis must be installed and launched on your local machine
+	--- download redis (take it from qa_task/dist) and launch installation
+	--- run redis server
+
+TEST EXECUTION
+Go to qa_task/test folder. There are 3 test modules, one for each task section
+------------OK LEVEL-------------
+1. run from the command line 
+	>>> python ok_level.py
+	response codes are tested here.
+	7 tests must be run
+2. screenshot of the tests execution is in qa_task/screenshots/ok_level.png
+------------NICE TO HAVE LEVEL-------------
+1. run from the command line 
+	>>> python nice_to_have.py
+	server functions are tested here.
+	16 tests must be run
+2. screenshot of the tests execution is in qa_task/screenshots/nice_to_have.png
+------------OUT OF BOX-------------
+1. run from the command line 
+	>>> python out_of_box.py
+	both response codes and server functions are tested here using unittest library
+	24 tests must be run
+2. screenshot of the tests execution is in qa_task/screenshots/out_of_box.png
+
+STATISTICS COLLECTION
+Statistics is calculated with bash scripts stored in qa_task/scripts. Output files are stored in qa_task/output.
+Input file with logs datamining.log is stored in qa_task/data
+Go to qa_test repository directory
+------------NICE_TO_HAVE-------------
+1. run from the command line 
+	$ /PATH/TO/REPO/qa_task/scripts/success_statistics.sh
+		number of successful requests per hour is counted here
+		script must be launched using full path to it
+2. run from the command line 
+	$ cat ./output/success_statistics.txt
+		you'll see number of successfull requests for each hour in format
+		{number} requests in {hour} 
+------------OUT OF BOX-------------
+1. run from the command line 
+	$ /PATH/TO/REPO/qa_task/scripts/success_statistics_percentage.sh
+		per cent of successful requests is counted here
+		script must be launched using full path to it
+2. run from the command line 
+	$ cat ./output/success_statistics_percentage.txt
+		you'll see percent of successfull requests for each hour in format
+		at {hour} {number}% of requests are successful
